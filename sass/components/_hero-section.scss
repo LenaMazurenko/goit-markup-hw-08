@@ -1,10 +1,11 @@
 /*-----block Hero-----------*/
 .hero-section {
-min-width: 480px;
-  padding-top: 200px;
+  min-width: 480px;
+  min-height: 400px;
+  padding-top: 118px;
   text-align: center;
   margin: 0 auto;
-
+ 
   background-color: $dark-bg-color;
   background-image: linear-gradient(
           to right,
@@ -13,15 +14,15 @@ min-width: 480px;
       ),
       url("../images/hero_img.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-section__title{
   margin-bottom: 30px;
 
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
+  font-size: 26px;
+  line-height: 1.61;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $white-text-color;
@@ -30,44 +31,14 @@ min-width: 480px;
   @extend %button;
 }
 
-
-
-@media screen and (min-width: 900px) {
-  body {
-    background-color: orange;
+@media screen and (min-width: 1600px) {
+  .hero-section{
+    max-width: 1600px;
+    min-height: 600px;
+    padding-top: 200px;
+  }
+  .hero-section__title{
+    font-size: 44px;
+    line-height: 1.36;
   }
 }
-
-/*-----block Hero-----------*/
-.hero-section {
-  max-width: 1600px;
-  min-height: 600px;
-  padding-top: 200px;
-  text-align: center;
-  margin: 0 auto;
-
-  background-color: $dark-bg-color;
-  background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-      ),
-      url("../images/hero_img.jpg");
-  background-size: cover;
-}
-
-.hero-section__title{
-  margin-bottom: 30px;
-
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: $white-text-color;
-}
-.hero-section__button{
-  @extend %button;
-}
-
