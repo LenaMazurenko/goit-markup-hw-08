@@ -2,10 +2,10 @@
 .hero-section {
   min-width: 480px;
   min-height: 400px;
-  padding-top: 118px;
-  text-align: center;
+  @include flex-container(center, center);
+  flex-direction: column;
   margin: 0 auto;
- 
+
   background-color: $dark-bg-color;
   background-image: linear-gradient(
           to right,
@@ -15,6 +15,10 @@
       url("../images/hero_img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media  screen and (min-width: $desktop-width) {
+    width: $desktop-width;
+  } 
 }
 
 .hero-section__title{
@@ -26,19 +30,13 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $white-text-color;
-}
-.hero-section__button{
-  @extend %button;
-}
 
-@media screen and (min-width: 1600px) {
-  .hero-section{
-    max-width: 1600px;
-    min-height: 600px;
-    padding-top: 200px;
-  }
-  .hero-section__title{
+  @media  screen and (min-width: $desktop-width) {
     font-size: 44px;
     line-height: 1.36;
-  }
+    }
+  } 
+.hero-section__button{
+  @extend %button;
+  display: block;
 }

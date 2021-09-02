@@ -34,6 +34,7 @@ body{
   letter-spacing: 0.03em;
   color: $main-text-color;
   background-color: $main-bg-color;
+  box-sizing: border-box;
 }
 .list {
   list-style: none;
@@ -52,17 +53,12 @@ p {
 .flex-container {
   display: flex;
 }
-
-@mixin container($container-width) {
-  width: $container-width;
-
+%container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
-@mixin container-position($paddings, $screen-width) {
-
-  padding-top: $paddings;
-  padding-bottom: $paddings;
-}
 
 .visualy-hidden {
   position: absolute;
@@ -82,7 +78,7 @@ img {
 a {
   display: block;
 }
-.block-social-links {
+%block-social-links {
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -1,6 +1,17 @@
 /*-----block Make*/
-.make-section {
-  padding-bottom: 94px;
+.make-section{
+  @media  screen and (max-width: $desktop-width - 1px) {
+    display: none;
+  } 
+    width: $desktop-width;
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 94px;
+  } 
+
+.make-container{
+  @extend %container;
+  width: 1200px;
 }
 .make-section__title {
   text-align: center;
@@ -37,3 +48,4 @@
 
   color: $white-text-color;
 }
+

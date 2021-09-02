@@ -1,11 +1,47 @@
 /*------------------- Portfolio.html-----------*/
+.portfolio-section {
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media  screen and (min-width: $mobile-width) {
+   width: $mobile-width;
+  }
+  @media  screen and (min-width: $tablet-width) {
+   width: $tablet-width;
+  }
+  @media  screen and (min-width: $desktop-width) {
+   width: $desktop-width;
+   padding-top: 94px;
+   padding-bottom: 94px;
+  } 
+}
+.portfolio-container{
+  @extend %container;
+  @media  screen and (min-width: $desktop-width) {
+    width: 1200px;
+  }
+}
 /*-----list Filter*/
 .list-filter {
-  @include flex-container($justify: center);
-  margin-bottom: 50px;
+  @include flex-container();
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  @media  screen and (min-width: $tablet-width) {
+    margin-bottom: 15px;
+    justify-content: center;
+  }
+  @media  screen and (min-width: $desktop-width) {
+    margin-bottom: 35px;
+    justify-content: center;
+  } 
 }
-.list-filter__element:not(:last-child) {
-  margin-right: 8px;
+.list-filter__element{
+  margin-bottom: 15px;
+  
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 .list-filter__button {
   padding: 6px 22px;
@@ -24,34 +60,49 @@
       color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-      &:hover,
-      &:focus {
-        background-color: $active-color;
-        color: $white-text-color;
-        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08);
-}
+  &:hover,
+  &:focus {
+    background-color: $active-color;
+    color: $white-text-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08);
+  }
 }
 
 
 /*-----list  Portfolio*/
 .list-portfolio {
-@include flex-container();
+@include flex-container(space-between, flex-start);
   flex-wrap: wrap;
 }
 .list-portfolio__item {
-  width: 370px;
+  width: 100%;
   cursor: pointer;
 
-  &:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
-  &:not(:nth-last-child(-n + 3)) {
+  &:not(:last-child) {
     margin-bottom: 30px;
   }
 }
 
+@media  screen and (min-width: $tablet-width) {
+  .list-portfolio__item{
+    width: calc((100% - 30px) / 2);
+ 
+  }
+  .list-portfolio__block-title {
+    height: 146px;
+  }
+ }
+ @media  screen and (min-width: $desktop-width) {
+  .list-portfolio__item{
+    width: calc((100% - 30px * 2) / 3);
+    &:nth-child(n+8){
+      margin-bottom: 0;
+    }
+  }
+ } 
 
 .list-portfolio__block-link {
+
   text-decoration: none;
   background: $main-bg-color;
   border-top: none;
