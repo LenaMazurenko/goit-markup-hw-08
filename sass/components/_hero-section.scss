@@ -1,6 +1,7 @@
 /*-----block Hero-----------*/
 .hero-section {
   min-width: 480px;
+  max-width: 1600px;
   min-height: 400px;
   @include flex-container(center, center);
   flex-direction: column;

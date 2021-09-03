@@ -19,16 +19,32 @@
     </head>
     <body>
         <!--header-->
-        <header>
-            <div class="container header-wrapper">
+        <header class="header">
+            <div class="header-container">
                 <nav class="navbar-block">
                     <!-- logo in header -->
                     <a href="./index.html" class="logo"
                         >Web<span class="logo--part-in-header">Studio</span></a
                     >
+                    <!-- mobile button -->
+                    <button type="button" 
+                    class="mobile-menu-btn is-open" 
+                    aria-expanded="false"
+                    aria-controls="menu-container" 
+                    data-menu-button>
+
+                <svg 
+                    width="40" 
+                    height="40" 
+                    aria-label="переключатель мобильного меню"
+                >
+                     <use class="icon-open" href="./images/sprite.svg#menu_40px"></use>
+                     <use class="icon-close" href="./images/sprite.svg#close_40px"></use>
+                </svg>
+            </button>
 
                     <!-- navigation in header-->
-                    <ul class="nav-in-header list">
+                    <ul class="nav-in-header list menu-container" id="menu-container" data-menu>
                         <li class="nav-in-header__element">
                             <a href="./index.html" class="nav-in-header__link nav-in-header__link--current">Студия</a>
                         </li>
