@@ -18,8 +18,8 @@
         <title>WebStudio</title>
     </head>
     <body>
-         <!--header-->
-         <header class="header">
+        <!--header-->
+        <header class="header">
             <div class="header-container">
                 <nav class="navbar-block">
                     <!-- logo in header -->
@@ -30,17 +30,25 @@
                     <!-- navigation in header-->
                     <ul class="nav-in-header list">
                         <li class="nav-in-header__element">
-                            <a href="./index.html" class="nav-in-header__link">Студия</a>
+                            <a href="./index.html" class="nav-in-header__link"
+                                >Студия</a
+                            >
                         </li>
                         <li class="nav-in-header__element">
-                            <a class="nav-in-header__link nav-in-header__link--current" href="./portfolio.html">Портфолио</a>
+                            <a
+                                class="
+                                    nav-in-header__link
+                                    nav-in-header__link--current
+                                "
+                                href="./portfolio.html"
+                                >Портфолио</a
+                            >
                         </li>
                         <li class="nav-in-header__element">
                             <a class="nav-in-header__link" href="#">Контакты</a>
                         </li>
                     </ul>
                 </nav>
-
                 <!-- contacts in header-->
                 <ul class="contacts-in-header list">
                     <li class="contacts-in-header__list-item">
@@ -48,7 +56,11 @@
                             class="contacts-in-header__element"
                             href="mailto:info@devstudio.com"
                         >
-                            <svg width="16" height="12" class="contacts-in-header__icon">
+                            <svg
+                                width="16"
+                                height="12"
+                                class="contacts-in-header__icon"
+                            >
                                 <use href="./images/sprite.svg#envelope"></use>
                             </svg>
                             info@devstudio.com
@@ -59,7 +71,11 @@
                             class="contacts-in-header__element"
                             href="tel:+380961111111"
                         >
-                            <svg width="10" height="16" class="contacts-in-header__icon">
+                            <svg
+                                width="10"
+                                height="16"
+                                class="contacts-in-header__icon"
+                            >
                                 <use
                                     href="./images/sprite.svg#smartphone"
                                 ></use>
@@ -69,9 +85,124 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="header-container-mobile">
+                <nav class="navbar-block-mobile">
+                    <!-- logo in header -->
+                    <a href="./index.html" class="logo"
+                        >Web<span class="logo--part-in-header">Studio</span></a
+                    >
+                    <!-- mobile button -->
+                    <button
+                        type="button"
+                        class="menu-toggle js-open-menu"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu"
+                    >
+                        <svg
+                            width="40"
+                            height="40"
+                            aria-label="переключатель мобильного   меню"
+                        >
+                            <use
+                                class="icon-menu"
+                                href="./images/sprite.svg#menu_40px"
+                            ></use>
+                        </svg>
+                    </button>
+
+                    <!-- navigation + contacts + sotiallincs-->
+                    <div
+                        class="menu-container js-menu-container"
+                        id="mobile-menu"
+                    >
+                        <div class="drop-menu">
+                            <button class="menu-toggle js-close-menu">
+                                <svg
+                                    width="40"
+                                    height="40"
+                                    aria-label="Переключатель мобильного меню"
+                                >
+                                    <use
+                                        class="icon-cross"
+                                        href="./images/sprite.svg#close_40px"
+                                    ></use>
+                                </svg>
+                            </button>
+                            <!-- navigation -->
+                            <ul class="nav-in-header list">
+                                <li class="nav-in-header__element">
+                                    <a
+                                        href="./index.html"
+                                        class="nav-in-header__link"
+                                        >Студия</a
+                                    >
+                                </li>
+                                <li class="nav-in-header__element">
+                                    <a
+                                        class="
+                                            nav-in-header__link
+                                            nav-in-header__link--current
+                                        "
+                                        href="./portfolio.html"
+                                        >Портфолио</a
+                                    >
+                                </li>
+                                <li class="nav-in-header__element">
+                                    <a class="nav-in-header__link" href="#"
+                                        >Контакты</a
+                                    >
+                                </li>
+                            </ul>
+                            <!-- contacts -->
+                            <ul class="contacts-in-header list">
+                                <li class="contacts-in-header__list-item">
+                                    <a
+                                        class="contacts-in-header__element--tel"
+                                        href="tel:+380961111111"
+                                    >
+                                        +38 096 111 11 11
+                                    </a>
+                                </li>
+                                <li class="contacts-in-header__list-item">
+                                    <a
+                                        class="
+                                            contacts-in-header__element--email
+                                        "
+                                        href="mailto:info@devstudio.com"
+                                    >
+                                        info@devstudio.com
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- sicial-links -->
+                            <ul class="social-links-in-header list">
+                                <li class="social-links-in-header__element">
+                                    <a class="header-social-link" href="#"
+                                        >Instagram</a
+                                    >
+                                </li>
+                                <li class="social-links-in-header__element">
+                                    <a class="header-social-link" href="#"
+                                        >Twitter</a
+                                    >
+                                </li>
+                                <li class="social-links-in-header__element">
+                                    <a class="header-social-link" href="#"
+                                        >Facebook</a
+                                    >
+                                </li>
+                                <li class="social-links-in-header__element">
+                                    <a class="header-social-link" href="#"
+                                        >LinkedIn</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </header>
-
-
         <!-- main -->
         <main>
             <!-- block Portfolio -->
@@ -114,9 +245,11 @@
                             <a class="list-portfolio__block-link" href="#">
                                 <div class="list-portfolio__img-block">
                                     <img
+                                        class="list-portfolio__img"
+                                        srcset="images/project1.jpg 1x"
+                                        srcset="images/project1_2x.jpg 2x"
                                         src="./images/project1.jpg"
                                         alt="изображение на ПК"
-                                        width="370"
                                     />
                                     <div class="list-portfolio__overlay-block">
                                         <p class="list-portfolio__overlay-text">
@@ -130,8 +263,16 @@
                                 </div>
 
                                 <div class="list-portfolio__block-title">
-                                    <h2 class="list-portfolio__project-name">Технокряк</h2>
-                                    <p class="list-portfolio__project-discription">Веб-сайт</p>
+                                    <h2 class="list-portfolio__project-name">
+                                        Технокряк
+                                    </h2>
+                                    <p
+                                        class="
+                                            list-portfolio__project-discription
+                                        "
+                                    >
+                                        Веб-сайт
+                                    </p>
                                 </div>
                             </a>
                         </li>
@@ -139,9 +280,11 @@
                             <a class="list-portfolio__block-link" href="#">
                                 <div class="list-portfolio__img-block">
                                     <img
+                                        class="list-portfolio__img"
+                                        srcset="images/project2.jpg 1x"
+                                        srcset="images/project2_2x.jpg 2x"
                                         src="./images/project2.jpg"
                                         alt="игра в баскетбол"
-                                        width="370"
                                     />
                                     <div class="list-portfolio__overlay-block">
                                         <p class="list-portfolio__overlay-text">
@@ -158,7 +301,13 @@
                                     <h2 class="list-portfolio__project-name">
                                         Постер New Orlean vs Golden Star
                                     </h2>
-                                    <p class="list-portfolio__project-discription">Дизайн</p>
+                                    <p
+                                        class="
+                                            list-portfolio__project-discription
+                                        "
+                                    >
+                                        Дизайн
+                                    </p>
                                 </div>
                             </a>
                         </li>
@@ -166,9 +315,11 @@
                             <a class="list-portfolio__block-link" href="#">
                                 <div class="list-portfolio__img-block">
                                     <img
+                                        class="list-portfolio__img"
+                                        srcset="images/project3.jpg 1x"
+                                        srcset="images/project3_2x.jpg 2x"
                                         src="./images/project3.jpg"
                                         alt="постер ресторана"
-                                        width="370"
                                     />
                                     <div class="list-portfolio__overlay-block">
                                         <p class="list-portfolio__overlay-text">
@@ -185,7 +336,11 @@
                                     <h2 class="list-portfolio__project-name">
                                         Ресторан Seafood
                                     </h2>
-                                    <p class="list-portfolio__project-discription">
+                                    <p
+                                        class="
+                                            list-portfolio__project-discription
+                                        "
+                                    >
                                         Приложение
                                     </p>
                                 </div>
@@ -195,9 +350,11 @@
                             <a class="list-portfolio__block-link" href="#">
                                 <div class="list-portfolio__img-block">
                                     <img
+                                        class="list-portfolio__img"
+                                        srcset="images/project4.jpg 1x"
+                                        srcset="images/project4_2x.jpg 2x"
                                         src="./images/project4.jpg"
                                         alt="наушники"
-                                        width="370"
                                     />
                                     <div class="list-portfolio__overlay-block">
                                         <p class="list-portfolio__overlay-text">
@@ -211,8 +368,16 @@
                                 </div>
 
                                 <div class="list-portfolio__block-title">
-                                    <h2 class="list-portfolio__project-name">Проект Prime</h2>
-                                    <p class="list-portfolio__project-discription">Маркетинг</p>
+                                    <h2 class="list-portfolio__project-name">
+                                        Проект Prime
+                                    </h2>
+                                    <p
+                                        class="
+                                            list-portfolio__project-discription
+                                        "
+                                    >
+                                        Маркетинг
+                                    </p>
                                 </div>
                             </a>
                         </li>
@@ -220,9 +385,11 @@
                             <a class="list-portfolio__block-link" href="#">
                                 <div class="list-portfolio__img-block">
                                     <img
+                                        class="list-portfolio__img"
+                                        srcset="images/project5.jpg 1x"
+                                        srcset="images/project5_2x.jpg 2x"
                                         src="./images/project5.jpg"
                                         alt="2 коробки"
-                                        width="370"
                                     />
                                     <div class="list-portfolio__overlay-block">
                                         <p class="list-portfolio__overlay-text">
@@ -236,8 +403,14 @@
                                 </div>
 
                                 <div class="list-portfolio__block-title">
-                                    <h2 class="list-portfolio__project-name">Проект Boxes</h2>
-                                    <p class="list-portfolio__project-discription">
+                                    <h2 class="list-portfolio__project-name">
+                                        Проект Boxes
+                                    </h2>
+                                    <p
+                                        class="
+                                            list-portfolio__project-discription
+                                        "
+                                    >
                                         Приложение
                                     </p>
                                 </div>
@@ -247,9 +420,11 @@
                             <a class="list-portfolio__block-link" href="#">
                                 <div class="list-portfolio__img-block">
                                     <img
+                                        class="list-portfolio__img"
+                                        srcset="images/project6.jpg 1x"
+                                        srcset="images/project6_2x.jpg 2x"
                                         src="./images/project6.jpg"
                                         alt="монитр"
-                                        width="370"
                                     />
                                     <div class="list-portfolio__overlay-block">
                                         <p class="list-portfolio__overlay-text">
@@ -266,7 +441,13 @@
                                     <h2 class="list-portfolio__project-name">
                                         Inspiration has no Borders
                                     </h2>
-                                    <p class="list-portfolio__project-discription">Веб-сайт</p>
+                                    <p
+                                        class="
+                                            list-portfolio__project-discription
+                                        "
+                                    >
+                                        Веб-сайт
+                                    </p>
                                 </div>
                             </a>
                         </li>
@@ -274,9 +455,11 @@
                             <a class="list-portfolio__block-link" href="#">
                                 <div class="list-portfolio__img-block">
                                     <img
+                                        class="list-portfolio__img"
+                                        srcset="images/project7.jpg 1x"
+                                        srcset="images/project7_2x.jpg 2x"
                                         src="./images/project7.jpg"
                                         alt="книга"
-                                        width="370"
                                     />
                                     <div class="list-portfolio__overlay-block">
                                         <p class="list-portfolio__overlay-text">
@@ -293,7 +476,13 @@
                                     <h2 class="list-portfolio__project-name">
                                         Издание Limited Edition
                                     </h2>
-                                    <p class="list-portfolio__project-discription">Дизайн</p>
+                                    <p
+                                        class="
+                                            list-portfolio__project-discription
+                                        "
+                                    >
+                                        Дизайн
+                                    </p>
                                 </div>
                             </a>
                         </li>
@@ -301,9 +490,11 @@
                             <a class="list-portfolio__block-link" href="#">
                                 <div class="list-portfolio__img-block">
                                     <img
+                                        class="list-portfolio__img"
+                                        srcset="images/project8.jpg 1x"
+                                        srcset="images/project8_2x.jpg 2x"
                                         src="./images/project8.jpg"
                                         alt="бирка"
-                                        width="370"
                                     />
                                     <div class="list-portfolio__overlay-block">
                                         <p class="list-portfolio__overlay-text">
@@ -317,8 +508,16 @@
                                 </div>
 
                                 <div class="list-portfolio__block-title">
-                                    <h2 class="list-portfolio__project-name">Проект LAB</h2>
-                                    <p class="list-portfolio__project-discription">Маркетинг</p>
+                                    <h2 class="list-portfolio__project-name">
+                                        Проект LAB
+                                    </h2>
+                                    <p
+                                        class="
+                                            list-portfolio__project-discription
+                                        "
+                                    >
+                                        Маркетинг
+                                    </p>
                                 </div>
                             </a>
                         </li>
@@ -326,9 +525,11 @@
                             <a class="list-portfolio__block-link" href="#">
                                 <div class="list-portfolio__img-block">
                                     <img
+                                        class="list-portfolio__img"
+                                        srcset="images/project9.jpg 1x"
+                                        srcset="images/project9_2x.jpg 2x"
                                         src="./images/project9.jpg"
                                         alt="ноутбук"
-                                        width="370"
                                     />
                                     <div class="list-portfolio__overlay-block">
                                         <p class="list-portfolio__overlay-text">
@@ -345,7 +546,11 @@
                                     <h2 class="list-portfolio__project-name">
                                         Growing Business
                                     </h2>
-                                    <p class="list-portfolio__project-discription">
+                                    <p
+                                        class="
+                                            list-portfolio__project-discription
+                                        "
+                                    >
                                         Приложение
                                     </p>
                                 </div>
@@ -356,10 +561,9 @@
             </section>
         </main>
 
-         <!--footer-->
-         <footer class="footer">
+        <!--footer-->
+        <footer class="footer">
             <div class="footer-container">
-
                 <!-- Contacts-block in footer -->
                 <div class="contacts-block-in-footer">
                     <!-- logo in footer -->
@@ -369,15 +573,21 @@
                     <address class="address-in-footer">
                         <ul class="address-in-footer__list list">
                             <li class="address-in-footer__text">
-                                <a class="address-in-footer__link" href="#">г. Киев, пр-т Леси Украинки, 26</a>
+                                <a class="address-in-footer__link" href="#"
+                                    >г. Киев, пр-т Леси Украинки, 26</a
+                                >
                             </li>
                             <li class="address-in-footer__element">
-                                <a class="address-in-footer__link" href="mailto:info@example.com"
+                                <a
+                                    class="address-in-footer__link"
+                                    href="mailto:info@example.com"
                                     >info@example.com</a
                                 >
                             </li>
                             <li class="address-in-footer__element">
-                                <a class="address-in-footer__link" href="tel:+380991111111"
+                                <a
+                                    class="address-in-footer__link"
+                                    href="tel:+380991111111"
                                     >+38 099 111 11 11</a
                                 >
                             </li>
@@ -385,7 +595,7 @@
                     </address>
                 </div>
 
-                <!-- Join-block in footer --> 
+                <!-- Join-block in footer -->
                 <div class="join-block-in-footer">
                     <h2 class="join-block-in-footer__title">присоединяйтесь</h2>
                     <ul class="block-social-links list">
@@ -446,7 +656,9 @@
 
                 <!-- NewsLetter-block in footer -->
                 <div class="newsletter-block-in-footer">
-                    <h2 class="newsletter-block-in-footer__title">Подпишитесь на рассылку</h2>
+                    <h2 class="newsletter-block-in-footer__title">
+                        Подпишитесь на рассылку
+                    </h2>
                     <form class="form-newsletter" name="newsletter">
                         <input
                             class="form-newsletter__input"
@@ -468,5 +680,13 @@
                 </div>
             </div>
         </footer>
+        <script src="./js/modal.js"></script>
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"
+        ></script>
+        <script src="./js/mobile-menu.js"></script>
     </body>
 </html>
