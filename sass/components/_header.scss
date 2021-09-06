@@ -1,11 +1,12 @@
 /*------------HEADER----------------------*/
 .header {
     margin: 0 auto;
+    min-width: 320px;
     height: 80px;
     border-bottom: 1px solid #ececec;
 
     @media screen and (max-width: 767px) {
-        width: $mobile-width;
+        max-width: $mobile-width;
         .header-container {
             display: none;
         }
@@ -262,6 +263,7 @@
 
     .social-links-in-header {
         @include flex-container();
+        flex-wrap: wrap;
         font-size: 18px;
         line-height: 1.22;
         .header-social-link {
