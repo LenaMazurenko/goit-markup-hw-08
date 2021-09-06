@@ -33,10 +33,6 @@ body {
     color: $main-text-color;
     background-color: $main-bg-color;
     box-sizing: border-box;
-
-    @media screen and (max-width: $mobile-width) {
-        overflow-y: hidden;
-    }
 }
 .list {
     list-style: none;
