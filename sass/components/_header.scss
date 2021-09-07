@@ -153,7 +153,7 @@
 /*---mobile menu----*/
 .header-container-mobile {
     position: relative;
-    z-index: 999;
+    z-index: 100;
     @extend %container;
     height: 100%;
     @media screen and (min-width: $desktop-width) {
@@ -194,7 +194,6 @@
 
 .menu-container {
     background-color: #fff;
-    height: 796px;
     padding: 0 15px;
     text-align: center;
 
@@ -212,71 +211,80 @@
     }
 }
 .drop-menu {
+    @include flex-container(space-between, flex-start);
+    flex-direction: column;
     background-color: $main-bg-color;
-    height: 100%;
-    padding-left: 25px;
+    height: 100vh;
+    max-height: 796px;
+    padding: 48px 40px;
     text-align: left;
 
     font-weight: 500;
     letter-spacing: 0.02em;
 
     .menu-toggle {
-        display: block;
-        margin-top: 10px;
-        margin-left: auto;
+        position: absolute;
+        top: 10px;
+        right: 0;
+    }
+    .nav-and-contacts-block {
+        @include flex-container(space-between, flex-start);
+        flex-direction: column;
     }
     .nav-in-header {
-        padding-bottom: 302px;
+        padding-bottom: 300px;
+        @media screen and (max-height: 750px) {
+            padding-bottom: 50px;
+        }
+    }
+    font-size: 40px;
+    line-height: 1.18;
+    .nav-in-header__element:not(:last-child) {
+        margin-bottom: 32px;
+    }
+    .nav-in-header__link {
+        color: $main-text-color;
+        text-decoration: none;
+    }
 
-        font-size: 40px;
+    .nav-in-header__link--current {
+        color: $active-color;
+    }
+}
+.contacts-in-header {
+    padding-bottom: 64px;
+
+    .contacts-in-header__element--tel {
+        margin-bottom: 32px;
+
+        font-size: 34px;
         line-height: 1.18;
-        .nav-in-header__element:not(:last-child) {
-            margin-bottom: 32px;
-        }
-        .nav-in-header__link {
-            color: $main-text-color;
-            text-decoration: none;
-        }
-
-        .nav-in-header__link--current {
-            color: $active-color;
-        }
+        color: $active-color;
+        text-decoration: none;
     }
-    .contacts-in-header {
-        padding-bottom: 64px;
+    .contacts-in-header__element--email {
+        font-size: 24px;
+        line-height: 1.17;
+        color: $secondary-text-color;
+        text-decoration: none;
+    }
+}
 
-        .contacts-in-header__element--tel {
-            margin-bottom: 32px;
-
-            font-size: 34px;
-            line-height: 1.18;
-            color: $active-color;
-            text-decoration: none;
-        }
-        .contacts-in-header__element--email {
-            font-size: 24px;
-            line-height: 1.17;
-            color: $secondary-text-color;
-            text-decoration: none;
-        }
+.social-links-in-header {
+    @include flex-container();
+    flex-wrap: wrap;
+    font-size: 18px;
+    line-height: 1.22;
+    .header-social-link {
+        color: $active-color;
+        text-decoration: none;
     }
 
-    .social-links-in-header {
-        @include flex-container();
-        flex-wrap: wrap;
-        font-size: 18px;
-        line-height: 1.22;
-        .header-social-link {
-            color: $active-color;
-            text-decoration: none;
-        }
-
-        .social-links-in-header__element:not(:last-child) {
-            padding-right: 10px;
-            border-right: 1px solid rgba(33, 33, 33, 0.2);
-        }
-        .social-links-in-header__element:not(:first-child) {
-            padding-left: 10px;
-        }
+    .social-links-in-header__element:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+    .social-links-in-header__element:not(:first-child) {
+        padding-left: 10px;
     }
 }
