@@ -20,8 +20,17 @@
 }
 
 .modal-window {
-    height: auto;
-    @include position-container_top_left(absolute, 50%, 50%, 600px, 95vw);
+    //height: auto;
+    min-width: 290px;
+    min-height: 500px;
+
+    @include position-container_top_left(
+        absolute,
+        50%,
+        50%,
+        600px,
+        calc(100% - 30px)
+    );
 
     @media screen and (min-width: $mobile-width) {
         @include position-container_top_left(absolute, 50%, 50%, 609px, 450px);

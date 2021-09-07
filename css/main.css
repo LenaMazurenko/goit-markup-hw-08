@@ -1695,12 +1695,13 @@ a {
 }
 
 .modal-window {
-  height: auto;
+  min-width: 290px;
+  min-height: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
   height: 600px;
-  width: 95vw;
+  width: calc(100% - 30px);
   padding: 40px;
   background-color: #fff;
   -webkit-transform: translate(-50%, -50%) scale(1);
