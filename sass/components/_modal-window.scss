@@ -20,8 +20,8 @@
 }
 
 .modal-window {
-    min-width: 320px;
-    @include position-container_top_left(absolute, 50%, 50%, 609px, 100%);
+    height: auto;
+    @include position-container_top_left(absolute, 50%, 50%, 600px, 95vw);
 
     @media screen and (min-width: $mobile-width) {
         @include position-container_top_left(absolute, 50%, 50%, 609px, 450px);
@@ -64,6 +64,9 @@
     /*line-height: 1.1;*/
     text-align: center;
     color: $main-text-color;
+    @media screen and (max-width: 350px) {
+        font-size: 16px;
+    }
 }
 .modal-form-field__inputs {
     display: flex;
